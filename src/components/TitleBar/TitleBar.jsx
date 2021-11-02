@@ -1,5 +1,5 @@
 import React from "react";
-import './TitleBar.css'
+import "./TitleBar.css"
 
 
 function TitleBar(props){
@@ -7,7 +7,7 @@ function TitleBar(props){
         <div className="row row-space">
             <div className="col-md-12" style={{padding: 0}}>
                 <div className="titlebar-nav">
-                    <h1>Available Books</h1>
+                    <h1>Books</h1>
                 </div>
             </div>
         </div>

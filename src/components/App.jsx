@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { isElementOfType } from "react-dom/test-utils";
 import './App.css'
 import TitleBar from "./TitleBar/TitleBar";
+import BookViewer from "./BookViewer/BookViewer";
 
 class App extends Component {
     constructor(props) {
@@ -43,21 +44,7 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <TitleBar />
-                <div className="row">
-                    <div className="col-md-3">
-                        {/*Button herer to move to the previous book viewed*/}
-                        <button onClick={this.goToPreviousBook}>Previous Book</button>
-                    </div>
-                    <div className="col-md-6">
-                        {/*display book with cover here*/}
-                        <h1>{this.books[this.state.bookNumber].title}</h1>
-                        <h4>{this.books[this.state.bookNumber].author}</h4>
-                    </div>
-                    <div className="col-md-3">
-                        {/*Button to move to the next book here*/}
-                        <button onClick={this.goToNextBook}>Next Book</button>
-                    </div>
-                </div>
+                <BookViewer book={this.books[this.state.bookNumber]} nextbook={this.goToNextBook} previousbook={this.goToPreviousBook}/>
             </div>
         )
     }
